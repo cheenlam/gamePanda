@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="authoring-tool" content="Adobe_Animate_CC" />
+    <title>panda</title>
+    <!-- write your code here -->
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="script/panda.js"></script>
+    <script src="script/myjs.js"></script>
+    <link rel="stylesheet" href="css/panda.css" />
+  </head>
+
+  <body onload="init();" style="margin: 0px">
+    <div class="gameBody">
+      <div id="animation_container">
+        <canvas id="canvas" width="715"height="310"></canvas>
+        <div id="dom_overlay_container" style="pointer-events: none; overflow: hidden; width: 715px; height: 310px"></div>
+        <div class="win" id="win">
+          <div class="winBody">
+            <div class="wintitle"><span>202101070629</span></div>
+            <div class="result_gold" id="result_gold"></div>
+            <div class="result_silver" id="result_silver"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="gameborder">
+        <img src="images/border.png" />
+      </div>
+      <div class="newResult">
+        <h5>最新結果</h5>
+        <p>202101070628</p>
+      </div>
+
+      <div class="ranking">
+        <ul>
+          <li class="rankImg_1" id="rank_1"></li>
+          <li class="rankImg_2" id="rank_2"></li>
+          <li class="rankImg_3" id="rank_3"></li>
+          <li class="rankImg_4" id="rank_4"></li>
+          <li class="rankImg_5" id="rank_5"></li>
+          <li class="rankImg_6" id="rank_6"></li>
+        </ul>
+      </div>
+      <!-- <div class="gameDesc"></div> -->
+      <!-- <div class="musicBtn" id="musicBtn"></div> -->
+    </div>
+  </body>
+</html>

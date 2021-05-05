@@ -1,0 +1,278 @@
+	* {
+	    padding: 0;
+	    margin: 0;
+	}
+	
+	img {
+	    width: 100%;
+	    vertical-align: middle;
+	}
+	
+	.gameBody {
+	    width: 810px;
+	    position: relative;
+	    margin: 50px auto;
+	}
+	
+	.gameborder {
+	    width: 800px;
+	    position: relative;
+	}
+	
+	.newResult {
+	    font-size: 18px;
+	    font-weight: bold;
+	    line-height: 22px;
+	    color: #558423;
+	    position: absolute;
+	    top: 170px;
+	    left: 55px;
+	}
+	
+	.ranking {
+	    width: 100%;
+	    position: absolute;
+	    top: 155px;
+	    display: flex;
+	    justify-content: center;
+	}
+	
+	.ranking ul {
+	    list-style: none;
+	    display: flex;
+	}
+	
+	.ranking li {
+	    width: 70px;
+	    height: 70px;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: center;
+	}
+	
+	.ranking li+li {
+	    margin-left: 2px;
+	}
+	
+	.ranking .rankImg_1 {
+	    background-image: url(../images/rank_01.png);
+	}
+	
+	.ranking .rankImg_2 {
+	    background-image: url(../images/rank_02.png);
+	}
+	
+	.ranking .rankImg_3 {
+	    background-image: url(../images/rank_03.png);
+	}
+	
+	.ranking .rankImg_4 {
+	    background-image: url(../images/rank_04.png);
+	}
+	
+	.ranking .rankImg_5 {
+	    background-image: url(../images/rank_05.png);
+	}
+	
+	.ranking .rankImg_6 {
+	    background-image: url(../images/rank_06.png);
+	}
+	
+	#animation_container {
+	    position: absolute;
+	    top: 235px;
+	    left: 44px;
+	}
+	
+	.win {
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0, 0, 0, 0.7);
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    opacity: 0;
+	    transition: .5s;
+	}
+	
+	.win.on {
+	    opacity: 1;
+	}
+	
+	.win.on .winBody {
+	    animation: playWin 1s forwards ease-in-out, playWin2 2s 1s infinite linear;
+	}
+	
+	.winBody {
+	    width: 360px;
+	    height: 287px;
+	    background: url(../images/win.png)no-repeat center / cover;
+	    margin: auto;
+	    position: relative;
+	    transform: translateY(-100%);
+	    filter: drop-shadow(0 -10px 20px rgb(133, 120, 6));
+	}
+	
+	@keyframes playWin {
+	    0% {
+	        transform: translateY(-100%);
+	    }
+	    50% {
+	        transform: translateY(10%);
+	    }
+	    100% {
+	        transform: translateY(0%);
+	    }
+	}
+	
+	@keyframes playWin2 {
+	    0%,
+	    100% {
+	        transform: translateY(0%);
+	        filter: drop-shadow(0 -10px 20px rgb(133, 120, 6));
+	    }
+	    50% {
+	        transform: translateY(0%);
+	        filter: drop-shadow(0 -10px 40px rgb(200, 186, 55));
+	    }
+	}
+	
+	.wintitle {
+	    margin: auto;
+	    color: #fff;
+	    letter-spacing: 1px;
+	    font-weight: bold;
+	    font-size: 18px;
+	    position: absolute;
+	    bottom: 92px;
+	    left: 0;
+	    right: 0;
+	    text-align: center;
+	}
+	
+	.wintitle span {
+	    padding: 5px 20px;
+	    background-color: #9c6c41;
+	    background: linear-gradient(180deg, #c83727, #e67b6f);
+	    border-radius: 20px;
+	}
+	
+	.result_gold,
+	.result_silver {
+	    width: 40px;
+	    height: 40px;
+	    border-radius: 50%;
+	    position: absolute;
+	    bottom: 35px;
+	    margin: auto;
+	}
+	
+	.result_gold {
+	    left: 0;
+	    right: 90px;
+	}
+	
+	.result_silver {
+	    left: 90px;
+	    right: 0;
+	}
+	
+	.result_c1:before,
+	.result_c2:before,
+	.result_c3:before,
+	.result_c4:before,
+	.result_c5:before,
+	.result_c6:before {
+	    width: 40px;
+	    height: 40px;
+	    line-height: 40px;
+	    text-align: center;
+	    font-size: 25px;
+	    font-weight: bold;
+	    border-radius: 50%;
+	    color: #fff;
+	    position: absolute;
+	}
+	
+	.result_c1:before {
+	    content: '1';
+	    background-color: #D10000;
+	    box-shadow: 0 0 6px #5a0101 inset;
+	}
+	
+	.result_c2:before {
+	    content: '2';
+	    background-color: #FFAC00;
+	    box-shadow: 0 0 6px #7c5301 inset;
+	}
+	
+	.result_c3:before {
+	    content: '3';
+	    background-color: #89C833;
+	    box-shadow: 0 0 6px #4f721e inset;
+	}
+	
+	.result_c4:before {
+	    content: '4';
+	    background-color: #4BC2E7;
+	    box-shadow: 0 0 6px #2b7085 inset;
+	}
+	
+	.result_c5:before {
+	    content: '5';
+	    background-color: #1473E3;
+	    box-shadow: 0 0 6px#0c4f9b inset;
+	}
+	
+	.result_c6:before {
+	    content: '6';
+	    background-color: #A660BF;
+	    box-shadow: 0 0 6px #573264 inset;
+	}
+	
+	.musicBtn {
+	    width: 70px;
+	    height: 80px;
+	    position: absolute;
+	    top: 144px;
+	    right: 65px;
+	    color: #079b0d;
+	    filter: drop-shadow(4px 4px 5px #097a0d);
+	    cursor: pointer;
+	    background-image: url(../images/musicClose.png);
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: center;
+	}
+	
+	.gameDesc {
+	    width: 45px;
+	    height: 45px;
+	    position: absolute;
+	    top: 2px;
+	    right: 4px;
+	    border-radius: 50%;
+	    background: #000 url(../images/desc.png) no-repeat 55% 50% / 40%;
+	    box-shadow: 3px 3px 3px #3f3f3f;
+	    cursor: pointer;
+	    transform: scale(0.8) rotate(15deg);
+	    animation: gameDesc 2.5s infinite linear;
+	}
+	
+	@keyframes gameDesc {
+	    0%,
+	    100% {
+	        transform: scale(0.8) rotate(15deg);
+	    }
+	    50% {
+	        transform: scale(1) rotate(-25deg);
+	    }
+	}
+	
+	.musicBtn.on {
+	    background-image: url(../images/musicOpen.png);
+	}
+	
+	#animation_container{
+        overflow: hidden;
+    }
